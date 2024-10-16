@@ -6,14 +6,17 @@ function createWindow() {
     width: 1024,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
+      contextIsolation: true,
+      enableRemoteModule: false,
+      //preload: path.join(__dirname, 'preload.js'),
     },
   });
 
-  win.loadFile('index.html');
+  win.loadFile(path.join(__dirname, 'index.html'));
 }
 
 app.whenReady().then(() => {
+  console.log("app ready");
   createWindow();
 
   app.on('activate', () => {
