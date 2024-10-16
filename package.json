@@ -1,16 +1,31 @@
 {
   "name": "ello_test2",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "electron ."
+    "start": "electron . --disable-gpu",
+    "build": "electron-builder"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "ktm",
+    "email":"ktm010526@gmail.com"
+  },
   "license": "ISC",
   "devDependencies": {
-    "electron": "^33.0.0"
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.example.yourapp",
+    "linux": {
+      "target": [
+        "AppImage", "deb"
+      ],
+      "category": "Utility"
+    }
   }
+
 }
