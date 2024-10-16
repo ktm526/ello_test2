@@ -22,7 +22,7 @@
     "appId": "com.example.yourapp",
     "linux": {
       "target": [
-        "AppImage", "deb"
+        "AppImage"
       ],
       "category": "Utility"
     }
